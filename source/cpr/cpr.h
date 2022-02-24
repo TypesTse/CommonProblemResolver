@@ -10,3 +10,4 @@ void m_entry_ViewCredits();
 void m_entry_fixAll();
 void m_entry_stillNoBootInfo();
 void m_entry_fixMacSpecialFolders();
+void m_entry_fixSXOSSpecialFolders();

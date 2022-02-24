@@ -40,6 +40,7 @@ enum {
     // FixAll,
     MainConvenience,
     FixMacSpecialFolders,
+    FixSXOSSpecialFolders,
     MainOther,
     MainViewStillNoBootInfo,
     MainViewCredits,
@@ -63,6 +64,7 @@ MenuEntry_t mainMenuEntries[] = {
 
     [MainConvenience] = {.optionUnion = COLORTORGB(COLOR_WHITE) | SKIPBIT, .name = "\n-- Convenience --"},
     [FixMacSpecialFolders] = {.optionUnion = COLORTORGB(COLOR_ORANGE), .name = "Remove special folders created by Mac"},
+    [FixSXOSSpecialFolders] = {.optionUnion = COLORTORGB(COLOR_ORANGE), .name = "Remove special folders created by SXOS"},
 
     [MainOther] = {.optionUnion = COLORTORGB(COLOR_WHITE) | SKIPBIT, .name = "\n-- Other --"},
     [MainViewStillNoBootInfo] = {.optionUnion = COLORTORGB(COLOR_YELLOW), .name = "My switch still does not boot"},
@@ -136,6 +138,7 @@ menuPaths mainMenuPaths[] = {
     [FixArchiveBitA] = archBitHelperA,
     [FixArchiveBitN] = archBitHelperN,
     [FixMacSpecialFolders] = m_entry_fixMacSpecialFolders,
+    [FixSXOSSpecialFolders] = m_entry_fixSXOSSpecialFolders,
     // [FixAll] = m_entry_fixAll,
     [MainViewStillNoBootInfo] = m_entry_stillNoBootInfo,
     [MainRebootHekate] = RebootToHekate,

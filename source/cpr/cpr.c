@@ -417,6 +417,17 @@ void m_entry_fixMacSpecialFolders(){
     //      if folder m_entry_fixMacSpecialFolders with new path
 }
 
+void m_entry_fixSXOSSpecialFolders(){
+    gfx_clearscreen();
+    gfx_printf("\n\n-- Remove SXOS Autoloader Cache.\n\n");
+    char *storedTxtPath = CpyStr("sd:/sxos/titles/00FF0012656180FF/SXAUTOLOADER.txt");
+    char *storedCachePath = CpyStr("sd:/sxos/titles/00FF0012656180FF/cach");
+    _FolderDelete(storedCachePath);
+    _DeleteFileSimple(storedTxtPath);
+    gfx_printf("\n\n Done, press a key to proceed.");
+    hidWait();
+}
+
 void m_entry_stillNoBootInfo(){
     gfx_clearscreen();
     gfx_printf("\n\n-- My switch still does not boot.\n\n");
